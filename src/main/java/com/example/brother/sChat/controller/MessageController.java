@@ -158,4 +158,11 @@ public class MessageController {
 		return "data.json";
 	}
 
+	@RequestMapping("/clear")
+	public String clearData(){
+		
+		MessageDao clear = new MessageDao();
+		clear.clear();
+		return null;
+	}
 }
