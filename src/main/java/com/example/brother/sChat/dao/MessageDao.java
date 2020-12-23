@@ -102,7 +102,7 @@ public class MessageDao {
 
 
 	    }
-	 public clear() {
+	 public void clear() {
 
 	        try {
 	            conn = DriverManager.getConnection(
