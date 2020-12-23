@@ -102,5 +102,37 @@ public class MessageDao {
 
 
 	    }
+	 public clear() {
+
+	        try {
+	            conn = DriverManager.getConnection(
+	                    "jdbc:mysql://92.249.44.105/u107689122_info?" + "user=u107689122_merisite&password=0CandyCrush0");
+
+	            Statement update = null;
+
+	            try {
+	                update = conn.createStatement();
+	                update.executeUpdate(
+	                        "UPDATE `brothers` SET `json` = '"+"{\"MessageModel\":[{\"name\":\"Sarb\", \"message\":\"This app is developed by me\"}]}"+"' WHERE `brothers`.`id` = 1; ");
+
+	                update.close();
+	            } catch (SQLException ex) {
+	                // handle any errors
+	                System.out.println("SQLException: " + ex.getMessage());
+	                System.out.println("SQLState: " + ex.getSQLState());
+	                System.out.println("VendorError: " + ex.getErrorCode());
+	            }
+
+	            
+	            System.out.println("Log 1 : Connected To Database");
+	        } catch (SQLException ex) {
+	            // handle any errors
+	            System.out.println("SQLException: " + ex.getMessage());
+	            System.out.println("SQLState: " + ex.getSQLState());
+	            System.out.println("VendorError: " + ex.getErrorCode());
+	        }
+
+
+	    }
 }
 
