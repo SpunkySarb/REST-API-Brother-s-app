@@ -159,7 +159,7 @@ public class MessageController {
 	}
 
 	@RequestMapping("/clear")
-	public String clearData(){
+	public ModelAndView clearData(){
 		
 		MessageDao clear = new MessageDao();
 		clear.clear();
