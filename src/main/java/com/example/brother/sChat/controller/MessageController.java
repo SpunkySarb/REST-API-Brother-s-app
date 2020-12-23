@@ -163,6 +163,8 @@ public class MessageController {
 		
 		MessageDao clear = new MessageDao();
 		clear.clear();
+		data.clear();
+		object.clear();
 		return null;
 	}
 }
