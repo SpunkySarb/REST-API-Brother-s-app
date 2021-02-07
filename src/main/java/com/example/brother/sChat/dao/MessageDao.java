@@ -35,7 +35,8 @@ public class MessageDao {
 	    	
 	    	 try {
 		            conn = DriverManager.getConnection(
-		                    "jdbc:mysql://92.249.44.105/u107689122_info?" + "user=u107689122_merisite&password=0CandyCrush0");
+				    //Note I removed my database connnection from here
+		                    "Your database connection link with conffigurations here, I removed mine for security reasons");
 
 		            Statement read = null;
 		            ResultSet rs = null;
